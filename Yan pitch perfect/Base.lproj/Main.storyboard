@@ -134,12 +134,20 @@
                                     <action selector="playFastSound:" destination="s94-o9-Lqs" eventType="touchUpInside" id="zRz-3G-Log"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkV-mW-AMS">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="chipmunk">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dmP-qq-aUJ" firstAttribute="top" secondItem="een-Jc-0V4" secondAttribute="bottom" constant="50" id="CiY-GF-rBD"/>
                             <constraint firstAttribute="centerX" secondItem="OIR-4H-W6P" secondAttribute="centerX" constant="-17.5" id="DJt-au-OmM"/>
                             <constraint firstItem="avR-uy-yjM" firstAttribute="top" secondItem="OIR-4H-W6P" secondAttribute="bottom" constant="50" id="NAB-ch-wrF"/>
+                            <constraint firstItem="OkV-mW-AMS" firstAttribute="top" secondItem="VhC-QG-ExF" secondAttribute="bottom" constant="50" id="d37-xU-d3k"/>
+                            <constraint firstItem="OkV-mW-AMS" firstAttribute="leading" secondItem="NR6-6Z-kf1" secondAttribute="leadingMargin" constant="30" id="gdy-6W-S32"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dmP-qq-aUJ" secondAttribute="trailing" constant="30" id="p20-aK-Men"/>
                             <constraint firstItem="VhC-QG-ExF" firstAttribute="top" secondItem="een-Jc-0V4" secondAttribute="bottom" constant="50" id="vYK-3J-31d"/>
                             <constraint firstItem="VhC-QG-ExF" firstAttribute="leading" secondItem="NR6-6Z-kf1" secondAttribute="leadingMargin" constant="30" id="zu4-M8-Ygu"/>
@@ -149,14 +157,17 @@
                                 <exclude reference="VhC-QG-ExF"/>
                                 <exclude reference="OIR-4H-W6P"/>
                                 <exclude reference="dmP-qq-aUJ"/>
+                                <exclude reference="OkV-mW-AMS"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="NAB-ch-wrF"/>
-                                <exclude reference="DJt-au-OmM"/>
                                 <exclude reference="vYK-3J-31d"/>
                                 <exclude reference="zu4-M8-Ygu"/>
+                                <exclude reference="d37-xU-d3k"/>
+                                <exclude reference="gdy-6W-S32"/>
                                 <exclude reference="CiY-GF-rBD"/>
                                 <exclude reference="p20-aK-Men"/>
+                                <exclude reference="DJt-au-OmM"/>
+                                <exclude reference="NAB-ch-wrF"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -164,14 +175,17 @@
                                 <include reference="VhC-QG-ExF"/>
                                 <include reference="OIR-4H-W6P"/>
                                 <include reference="dmP-qq-aUJ"/>
+                                <include reference="OkV-mW-AMS"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="NAB-ch-wrF"/>
-                                <include reference="DJt-au-OmM"/>
                                 <include reference="vYK-3J-31d"/>
                                 <include reference="zu4-M8-Ygu"/>
+                                <include reference="d37-xU-d3k"/>
+                                <include reference="gdy-6W-S32"/>
                                 <include reference="CiY-GF-rBD"/>
                                 <include reference="p20-aK-Men"/>
+                                <include reference="DJt-au-OmM"/>
+                                <include reference="NAB-ch-wrF"/>
                             </mask>
                         </variation>
                     </view>
@@ -200,6 +214,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunk" width="100" height="100"/>
         <image name="fast" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slow" width="100" height="100"/>

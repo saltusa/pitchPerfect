@@ -61,7 +61,6 @@ class PlaySoundsViewController: UIViewController {
         audioPlayer.rate = 0.5
         audioPlayer.currentTime = 0
         audioPlayer.play()
-        
     }
     /*
     // MARK: - Navigation
