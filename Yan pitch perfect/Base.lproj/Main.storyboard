@@ -21,17 +21,21 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzQ-gH-3R3">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="microphone">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uVs-w7-08X"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIl-nM-5fw">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIl-nM-5fw">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="157" y="391" width="86" height="17"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8z-vT-6Te">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -48,6 +52,7 @@
                             <constraint firstItem="RIl-nM-5fw" firstAttribute="top" secondItem="yzQ-gH-3R3" secondAttribute="bottom" constant="41" id="ELz-pK-Yu1"/>
                             <constraint firstAttribute="centerY" secondItem="yzQ-gH-3R3" secondAttribute="centerY" id="IW5-Gc-RWa"/>
                             <constraint firstAttribute="centerX" secondItem="yzQ-gH-3R3" secondAttribute="centerX" id="cVw-tk-nDR"/>
+                            <constraint firstAttribute="centerX" secondItem="RIl-nM-5fw" secondAttribute="centerX" id="nkJ-75-jr9"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="w8z-vT-6Te" secondAttribute="bottom" constant="50" id="sbC-cJ-qsn"/>
                             <constraint firstAttribute="centerX" secondItem="w8z-vT-6Te" secondAttribute="centerX" id="uBD-dY-rZq"/>
                             <constraint firstAttribute="centerX" secondItem="RIl-nM-5fw" secondAttribute="centerX" id="xTt-c2-uiW"/>
@@ -59,12 +64,13 @@
                                 <exclude reference="w8z-vT-6Te"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="sbC-cJ-qsn"/>
-                                <exclude reference="ELz-pK-Yu1"/>
-                                <exclude reference="xTt-c2-uiW"/>
-                                <exclude reference="uBD-dY-rZq"/>
                                 <exclude reference="IW5-Gc-RWa"/>
                                 <exclude reference="cVw-tk-nDR"/>
+                                <exclude reference="ELz-pK-Yu1"/>
+                                <exclude reference="nkJ-75-jr9"/>
+                                <exclude reference="xTt-c2-uiW"/>
+                                <exclude reference="uBD-dY-rZq"/>
+                                <exclude reference="sbC-cJ-qsn"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -74,12 +80,13 @@
                                 <include reference="w8z-vT-6Te"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="sbC-cJ-qsn"/>
-                                <include reference="ELz-pK-Yu1"/>
-                                <include reference="xTt-c2-uiW"/>
-                                <include reference="uBD-dY-rZq"/>
                                 <include reference="IW5-Gc-RWa"/>
                                 <include reference="cVw-tk-nDR"/>
+                                <include reference="ELz-pK-Yu1"/>
+                                <include reference="nkJ-75-jr9"/>
+                                <include reference="xTt-c2-uiW"/>
+                                <include reference="uBD-dY-rZq"/>
+                                <include reference="sbC-cJ-qsn"/>
                             </mask>
                         </variation>
                     </view>
@@ -153,7 +160,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dmP-qq-aUJ" firstAttribute="top" secondItem="een-Jc-0V4" secondAttribute="bottom" constant="50" id="CiY-GF-rBD"/>
                             <constraint firstAttribute="centerX" secondItem="OIR-4H-W6P" secondAttribute="centerX" constant="-17.5" id="DJt-au-OmM"/>
@@ -175,16 +182,16 @@
                                 <exclude reference="VFY-57-LwP"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="vYK-3J-31d"/>
-                                <exclude reference="zu4-M8-Ygu"/>
+                                <exclude reference="NAB-ch-wrF"/>
+                                <exclude reference="DJt-au-OmM"/>
                                 <exclude reference="d37-xU-d3k"/>
                                 <exclude reference="gdy-6W-S32"/>
-                                <exclude reference="CiY-GF-rBD"/>
-                                <exclude reference="p20-aK-Men"/>
                                 <exclude reference="RZZ-b4-O8d"/>
                                 <exclude reference="fEj-GS-Lgt"/>
-                                <exclude reference="DJt-au-OmM"/>
-                                <exclude reference="NAB-ch-wrF"/>
+                                <exclude reference="vYK-3J-31d"/>
+                                <exclude reference="zu4-M8-Ygu"/>
+                                <exclude reference="CiY-GF-rBD"/>
+                                <exclude reference="p20-aK-Men"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -196,16 +203,16 @@
                                 <include reference="VFY-57-LwP"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="vYK-3J-31d"/>
-                                <include reference="zu4-M8-Ygu"/>
+                                <include reference="NAB-ch-wrF"/>
+                                <include reference="DJt-au-OmM"/>
                                 <include reference="d37-xU-d3k"/>
                                 <include reference="gdy-6W-S32"/>
-                                <include reference="CiY-GF-rBD"/>
-                                <include reference="p20-aK-Men"/>
                                 <include reference="RZZ-b4-O8d"/>
                                 <include reference="fEj-GS-Lgt"/>
-                                <include reference="DJt-au-OmM"/>
-                                <include reference="NAB-ch-wrF"/>
+                                <include reference="vYK-3J-31d"/>
+                                <include reference="zu4-M8-Ygu"/>
+                                <include reference="CiY-GF-rBD"/>
+                                <include reference="p20-aK-Men"/>
                             </mask>
                         </variation>
                     </view>

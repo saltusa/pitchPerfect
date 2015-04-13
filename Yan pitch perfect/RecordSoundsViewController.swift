@@ -26,6 +26,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         //TODO: hide the stop Button
         stopButton.hidden = true
         recordButton.enabled = true
+        recordingInProgress.text = "Tap to Record"
+        recordingInProgress.hidden = false;
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -35,12 +37,12 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBAction func recordAudio(sender: UIButton) {
         stopButton.hidden = false
         recordButton.enabled = false
+        recordingInProgress.text = "Recording..."
         recordingInProgress.hidden = false;
         //record audio
         println("in record audio")
         
-       let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
-        
+        let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
         let currentDateTime = NSDate()
         let formatter = NSDateFormatter()
         formatter.dateFormat = "ddMMyyyy-HHmmss"
@@ -59,14 +61,19 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         audioRecorder.record()
         
     }
+    
+    func initRecordedAudio (recorder: AVAudioRecorder) {
+        recordedAudio.filePathUrl = recorder.url
+        recordedAudio.title = recorder.url.lastPathComponent
+        
+    }
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
         if (flag) {
         
             //Save the recorded audio
             recordedAudio = RecordedAudio()
-            recordedAudio.filePathUrl = recorder.url
-            recordedAudio.title = recorder.url.lastPathComponent
-        
+            initRecordedAudio(recorder)
+            
             //TODO: perform segua (move to the next scene)
             self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
             
@@ -91,14 +98,14 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         //Hide the stop button
         stopButton.hidden = true
         recordButton.enabled = true
-        
-        //hide "recording" message
-        recordingInProgress.hidden = true;
+        recordingInProgress.hidden = true
         
         //stop recording
         audioRecorder.stop()
+        
         var audioSession = AVAudioSession.sharedInstance()
         audioSession.setActive(false, error: nil)
+        
     }
 }
 

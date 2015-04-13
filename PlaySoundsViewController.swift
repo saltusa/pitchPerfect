@@ -18,14 +18,6 @@ class PlaySoundsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-//        if var filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3") {
-//            var filePathUrl = NSURL.fileURLWithPath(filePath)
-//
-//        } else {
-//            println("file is empty")
-//        }
         audioPlayer = AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl, error: nil)
         audioPlayer.enableRate = true
         audioEngine = AVAudioEngine()
@@ -37,17 +29,24 @@ class PlaySoundsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func stopAllSound() {
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+    }
+    
     @IBAction func stopPlaySound(sender: UIButton) {
         //stop play sound
         println("stop all audio")
-        audioPlayer.stop()
+        stopAllSound()
     }
     
     @IBAction func playFastSound(sender: UIButton) {
+        
+        stopAllSound()
         //play fast sound
         println("play fast sound")
         
-        audioPlayer.stop()
         audioPlayer.rate = 2.0
         audioPlayer.currentTime = 0
         audioPlayer.play()
@@ -55,17 +54,17 @@ class PlaySoundsViewController: UIViewController {
     }
 
     @IBAction func playSlowSound(sender: UIButton) {
-        
+        stopAllSound()
         // play slow sound
         println("play slow sound")
 
-        audioPlayer.stop()
         audioPlayer.rate = 0.5
         audioPlayer.currentTime = 0
         audioPlayer.play()
     }
     
     @IBAction func playChipmunkSound(sender: UIButton) {
+        stopAllSound()
         // play chipmunk sound
         println("play chipmunk sound")
         playAudioWithVariablePitch( 1000 )
@@ -73,15 +72,14 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playDarthVaderSound(sender: UIButton) {
+        stopAllSound()
+        
         //play darthVader Sound
         println("play Darthvader Sound")
         playAudioWithVariablePitch(-1000)
     }
     func playAudioWithVariablePitch(pitch: Float){
         
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
         
         var audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
