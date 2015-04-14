@@ -22,6 +22,11 @@ class PlaySoundsViewController: UIViewController {
         audioPlayer.enableRate = true
         audioEngine = AVAudioEngine()
         audioFile = AVAudioFile(forReading: receivedAudio.filePathUrl, error: nil)
+        
+        //set audio output to speaker
+        var session = AVAudioSession.sharedInstance()
+        let speaker = AVAudioSessionPortOverride.Speaker
+        session.overrideOutputAudioPort(speaker, error: nil)
     }
 
     override func didReceiveMemoryWarning() {

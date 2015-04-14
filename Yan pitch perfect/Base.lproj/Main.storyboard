@@ -32,9 +32,8 @@
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="17"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
+                                <variation key="widthClass=compact">
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <rect key="frame" x="157" y="391" width="86" height="17"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8z-vT-6Te">
@@ -64,13 +63,13 @@
                                 <exclude reference="w8z-vT-6Te"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="IW5-Gc-RWa"/>
-                                <exclude reference="cVw-tk-nDR"/>
+                                <exclude reference="sbC-cJ-qsn"/>
                                 <exclude reference="ELz-pK-Yu1"/>
                                 <exclude reference="nkJ-75-jr9"/>
                                 <exclude reference="xTt-c2-uiW"/>
                                 <exclude reference="uBD-dY-rZq"/>
-                                <exclude reference="sbC-cJ-qsn"/>
+                                <exclude reference="IW5-Gc-RWa"/>
+                                <exclude reference="cVw-tk-nDR"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -80,13 +79,13 @@
                                 <include reference="w8z-vT-6Te"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="IW5-Gc-RWa"/>
-                                <include reference="cVw-tk-nDR"/>
+                                <include reference="sbC-cJ-qsn"/>
                                 <include reference="ELz-pK-Yu1"/>
                                 <include reference="nkJ-75-jr9"/>
                                 <include reference="xTt-c2-uiW"/>
                                 <include reference="uBD-dY-rZq"/>
-                                <include reference="sbC-cJ-qsn"/>
+                                <include reference="IW5-Gc-RWa"/>
+                                <include reference="cVw-tk-nDR"/>
                             </mask>
                         </variation>
                     </view>
